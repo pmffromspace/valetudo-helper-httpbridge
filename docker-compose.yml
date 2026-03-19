@@ -1,0 +1,9 @@
+services:
+  httpbridge:
+    build: .
+    container_name: valetudo-helper-httpbridge
+    ports:
+      - "1337:1337"
+    volumes:
+      - ./www:/app/www
+    restart: unless-stopped
